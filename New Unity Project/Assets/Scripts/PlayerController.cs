@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
      private Camera mainCamera;
 
-     public GunController theGun;
+    //  public GunController theGun;
 
     // Start is called before the first frame update
     void Start()
@@ -36,17 +36,17 @@ public class PlayerController : MonoBehaviour
             transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
         }
         
-        if(Input.GetMouseButtonDown(0))
-        {
-            theGun.isFiring = true;
+        // if(Input.GetMouseButtonDown(0))
+        // {
+        //     theGun.isFiring = true;
         
-        }
+        // }
         
-        if(Input.GetMouseButtonUp(0))
-        {
-            theGun.isFiring = false;
+        // if(Input.GetMouseButtonUp(0))
+        // {
+        //     theGun.isFiring = false;
 
-        }
+        // }
 
        
            
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         }   else if (Input.GetKey ("w") && !Input.GetKey (KeyCode.LeftShift)) {
             transform.position += transform.TransformDirection (Vector3.forward) * Time.deltaTime * movementSpeed;
         }   else if (Input.GetKey ("s")) {
-            transform.position -= transform.TransformDirection (Vector3.forward) * Time.deltaTime * movementSpeed;
+            transform.position -= transform.TransformDirection (Vector3.forward) * Time.deltaTime * movementSpeed * 2.5f;
         }
  
         if (Input.GetKey ("a") && !Input.GetKey ("d")) {

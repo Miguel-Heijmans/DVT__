@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class HealthMain : MonoBehaviour
 {
-    protected int currentHealth = 100;
+    protected int currentHealth = 10000000;
 
     protected int enemCurrentHp = 100;
     //public Slider healthBarSlider;
