@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     private Transform player;
 
     private float timeBtwnShots;
+    
     public float startTimeBetweenShots;
 
     public BulletController bullet;

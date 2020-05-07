@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponShotgun : MonoBehaviour
+public class WeaponShotgun : WeaponMain
 {
     public bool isFiring;
 
@@ -33,7 +33,7 @@ public class WeaponShotgun : MonoBehaviour
     {
         if (isFiring)
         {
-            
+            shotCounter -= Time.deltaTime;
             if (shotCounter <=0)
             {
                 shotCounter = timeBetweenShots;
@@ -43,21 +43,19 @@ public class WeaponShotgun : MonoBehaviour
                 newBullet.speed -= bulletSpeed;
                 newBullet1.speed -= bulletSpeed;
                 newBullet2.speed -= bulletSpeed;
-                weaponMain.shotgunAmmo -= 1;
+                shotgunAmmo -= 1;
 
             }
-            else
-            {
-                shotCounter = 0;
-            }
+            
             
         }
 
 
-        if (weaponMain.shotgunAmmo >= 0)
+        if (shotgunAmmo >= 0)
         {
             if (Input.GetMouseButtonDown(0))
-            { isFiring = true; }
+            { isFiring = true; 
+            Shoot();}
         }
         else 
         {isFiring = false;}
@@ -67,15 +65,18 @@ public class WeaponShotgun : MonoBehaviour
 
         
 
-        ammoCounterS.text = "ammoS: " + weaponMain.shotgunAmmo;
+        ammoCounterS.text = "ammoS: " + shotgunAmmo;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            weaponMain.shotgunAmmo += 50;
+            shotgunAmmo += 50;
         }
+    }
+    private void Shoot(){
+
     }
 
 
-    WeaponMain weaponMain = new WeaponMain();
+    // WeaponMain weaponMain = new WeaponMain();
 }

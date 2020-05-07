@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GunController : MonoBehaviour
+public class GunController : WeaponMain
 {
 
     public bool isFiring;
@@ -38,7 +38,7 @@ public class GunController : MonoBehaviour
                shotCounter = timeBetweenShots;
                BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
                newBullet.speed -= bulletSpeed;
-               weaponMain.machinegunAmmo -= 1;
+               machinegunAmmo -= 1;
 
             }
         } 
@@ -47,7 +47,7 @@ public class GunController : MonoBehaviour
             shotCounter = 0;
         }
 
-        if(weaponMain.machinegunAmmo >= 0)
+        if(machinegunAmmo >= 0)
         {
             if (Input.GetMouseButtonDown(0))
             { isFiring = true; }
@@ -59,7 +59,7 @@ public class GunController : MonoBehaviour
         { isFiring = false; }
 
 
-        ammoCounterM.text = "ammoM: " + weaponMain.machinegunAmmo;
+        ammoCounterM.text = "ammoM: " + machinegunAmmo;
 
 
 
@@ -68,11 +68,11 @@ public class GunController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         { 
-            weaponMain.machinegunAmmo += 100;
+            machinegunAmmo += 100;
         }
     } 
 
 
-    WeaponMain weaponMain = new WeaponMain();
+    // WeaponMain weaponMain = new WeaponMain();
 }
 

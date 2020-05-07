@@ -9,7 +9,7 @@ public class HealthAi : MonoBehaviour
     void Update()
     {
 
-        if (healthMain.enemyHp == 0)
+        if (healthMain.enemyHp <= 0)
         {
             Destroy(gameObject);
         }

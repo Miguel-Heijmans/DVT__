@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 3814671114686844153, guid: b4205a72dc07df34dbdc15185b5f4ae7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7853675
+      value: -7.98
       objectReference: {fileID: 0}
     - target: {fileID: 3814671114686844153, guid: b4205a72dc07df34dbdc15185b5f4ae7,
         type: 3}
@@ -141,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 3814671114686844153, guid: b4205a72dc07df34dbdc15185b5f4ae7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5769886
+      value: 8.05
       objectReference: {fileID: 0}
     - target: {fileID: 3814671114686844153, guid: b4205a72dc07df34dbdc15185b5f4ae7,
         type: 3}
@@ -2441,11 +2441,26 @@ PrefabInstance:
       propertyPath: ammoCounterS
       value: 
       objectReference: {fileID: 1577080891}
+    - target: {fileID: 948989726913596863, guid: d58321c99d233a344b0354ae32c914ad,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 948989726913596863, guid: d58321c99d233a344b0354ae32c914ad,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3713867640772032974, guid: d58321c99d233a344b0354ae32c914ad,
         type: 3}
       propertyPath: ammoCounterM
       value: 
       objectReference: {fileID: 461472396}
+    - target: {fileID: 5967565348727153824, guid: d58321c99d233a344b0354ae32c914ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6916988544856785115, guid: d58321c99d233a344b0354ae32c914ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2505,6 +2520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916988545146731894, guid: d58321c99d233a344b0354ae32c914ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d58321c99d233a344b0354ae32c914ad, type: 3}

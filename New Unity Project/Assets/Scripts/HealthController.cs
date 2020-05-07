@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class HealthController : MonoBehaviour
+public class HealthController : HealthMain
 {
     public Slider healthBarSlider;
 
@@ -14,14 +14,14 @@ public class HealthController : MonoBehaviour
     void Update()
     {
 
-        if (healthMain.playerHp == 0)
+        if (playerHp == 0)
         {
             SceneManager.LoadScene(sceneBuildIndex: 1);
         }
 
         healthBarSlider.maxValue = 100;
-        healthBarSlider.value = healthMain.playerHp;
-        healthText.text = healthMain.playerHp.ToString() + " / " + "100";
+        healthBarSlider.value = playerHp;
+        healthText.text = playerHp.ToString() + " / " + "100";
     }
 
     void OnCollisionEnter(Collision collision)
@@ -29,13 +29,13 @@ public class HealthController : MonoBehaviour
 
         if (collision.gameObject.tag == "Projectile")
         {
-            healthMain.playerHp -= 10;
+            playerHp -= 10;
         }
 
 
     }
 
-     HealthMain healthMain = new HealthMain();
+     //HealthMain healthMain = new HealthMain();
 
             
    
